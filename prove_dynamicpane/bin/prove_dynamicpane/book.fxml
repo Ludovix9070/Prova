@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:id="bookBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="170.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" styleClass="shadow" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prove_dynamicpane.BookController">
+   <children>
+      <ImageView fx:id="bookImage" fitHeight="240.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/f4rr.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="bookName" text=" Titolo libro">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="authorName" text="Autore" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

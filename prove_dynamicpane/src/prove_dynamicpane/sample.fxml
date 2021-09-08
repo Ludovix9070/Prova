@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prove_dynamicpane.Controller">
+   <top>
+      <HBox prefHeight="60.0" prefWidth="200.0" styleClass="white-background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="86.0" prefWidth="134.0" text="My library" textFill="#ee1d1d">
+               <font>
+                  <Font name="Edwardian Script ITC" size="36.0" />
+               </font>
+            </Label>
+            <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="47.0" prefWidth="4.0" />
+            <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="129.0" prefWidth="200.0">
+               <children>
+                  <TextField alignment="TOP_LEFT" prefHeight="24.0" prefWidth="191.0" promptText="search" stylesheets="@../css/styles.css">
+                     <styleClass>
+                        <String fx:value="round_layout" />
+                        <String fx:value="transparent" />
+                     </styleClass></TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="83.0" text="Utente" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Foto utente" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="190.0" prefWidth="220.0" styleClass="white-background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Label" />
+                  <HBox prefHeight="55.0" prefWidth="220.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/mvf4.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Recently Added">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Label>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0">
+               <content>
+                  <HBox fx:id="cardLayout" alignment="CENTER" prefHeight="199.0" prefWidth="854.0" spacing="20.0" styleClass="transparent" stylesheets="@../css/styles.css" />
+               </content>
+            </ScrollPane>
+            <Label text="Recommended">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Label>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@../css/styles.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="bookContainer" prefHeight="19.0" prefWidth="2.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
